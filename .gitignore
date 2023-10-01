@@ -1,0 +1,30 @@
+PHPLinkTesterWeb/vendor/
+PHPLinkTesterWeb/node_modules/
+PHPLinkTesterWeb/npm-debug.log
+PHPLinkTesterWeb/yarn-error.log
+
+# Laravel 4 specific
+PHPLinkTesterWeb/bootstrap/compiled.php
+PHPLinkTesterWeb/app/storage/
+
+# Laravel 5 & Lumen specific
+PHPLinkTesterWeb/public/storage
+PHPLinkTesterWeb/public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+PHPLinkTesterWeb/public_html/storage
+PHPLinkTesterWeb/public_html/hot
+
+PHPLinkTesterWeb/storage/*.key
+PHPLinkTesterWeb/.env
+PHPLinkTesterWeb/Homestead.yaml
+PHPLinkTesterWeb/Homestead.json
+PHPLinkTesterWeb/.vagrant
+PHPLinkTesterWeb/.phpunit.result.cache
+
+# PHPLinkTester Architeture specific
+
+PHPLinkTester/composer.phar
+PHPLinkTester//vendor/
+PHPLinkTester/test-cli.php
+PHPLinkTester/.phpunit.cache/test-results
