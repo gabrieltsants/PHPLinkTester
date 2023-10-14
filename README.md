@@ -20,5 +20,6 @@ For the interface, it is possible to use CURL or Guzzle in HTTP requests and onl
 The return will be the HTTP code in cases of requests of the same type, or 1/0 for requests of the protocol type, being 1 for a successful connection.
 
 ## Running 
+* Run `./configure.sh` to install composer dependencies and autoload.
 * `PHPLinkTesterWeb/`: Is possible to test running something like: `php -S PHPLinkTesterWeb/public/ -t localhost:8181` and access **localhost:8181** to see the web interface.
 * `PHPLinkTesterCLI/`: Run `php PHPLinkTesterCLI/PHPLinkTester.php -h` to see te availible options.
