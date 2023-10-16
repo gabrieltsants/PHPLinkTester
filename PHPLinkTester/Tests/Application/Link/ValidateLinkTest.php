@@ -2,7 +2,7 @@
 
 namespace PHPLinkTester\Tests\Application\Link;
 
-use PHPLinkTester\Application\Request\ValidateLinkCode;
+use PHPLinkTester\Application\Request\ValidateLinkData;
 use PHPLinkTester\Infrastructure\Link\LinkRepositoryCurl;
 use PHPLinkTester\Application\Request\RequestDto;
 use PHPLinkTester\Entities\Request\HttpRequest;
@@ -12,24 +12,24 @@ use PHPUnit\Framework\TestCase;
 
 class ValidateLinkTest extends TestCase
 {
-  public function testValidateLinkCodeCurl()
+  public function testValidateLinkDataCurl()
   {
     $requestDto = new RequestDto('https://www.google.com', '443', 'GET');
 
     $requestRepository = new LinkRepositoryCurl();
 
-    $useCase = new ValidateLinkCode($requestRepository);
+    $useCase = new ValidateLinkData($requestRepository);
     $code = $useCase->execute($requestDto);
     $this->assertSame('200', (string) $code->getCode());
   }
 
-  public function testValidateLinkCodefsock()
+  public function testValidateLinkDatafsock()
   {
     $requestDto = new RequestDto('test.rebex.net:22', '443', 'SSH');
 
     $requestRepository = new LinkRepositoryfsock();
 
-    $useCase = new ValidateLinkCode($requestRepository);
+    $useCase = new ValidateLinkData($requestRepository);
     $code = $useCase->execute($requestDto);
     $this->assertSame('1', (string) $code->getCode());
   }

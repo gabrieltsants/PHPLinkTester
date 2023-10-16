@@ -8,7 +8,7 @@ use PHPLinkTester\Entities\Request\RequestRepository;
 use PHPLinkTester\Entities\Request\RequestHandler;
 use PHPLinkTester\Entities\Response\RequestResponse;
 
-class ValidateLinkCode
+class ValidateLinkData
 {
   public function __construct (private RequestRepository $requestRepository) { }
 

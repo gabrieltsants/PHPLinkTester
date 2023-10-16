@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Interface\Http\{WebCurlInterface, WebGuzzleInterface};
 use App\Http\Controllers\Interface\Others\WebFsockInterface;
 use App\Http\Controllers\Interface\WebInterfaceNotFound;
-use PHPLinkTester\Application\Request\{RequestDto, ValidateLinkCode};
+use PHPLinkTester\Application\Request\{RequestDto, ValidateLinkData};
 
 class LinkController extends Controller
 {
@@ -67,7 +67,7 @@ class LinkController extends Controller
       
       $linkDto = new RequestDto($link, $port, $method);
   
-      $useCase = new ValidateLinkCode($linkIRepository);
+      $useCase = new ValidateLinkData($linkIRepository);
       $result = $useCase->execute($linkDto);
   
       return "$link;".$result->getCode();
